@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import StudentForm from './components/StudentForm';
 
-function App() {
+
+const App = () => {
+  const handleStudentFormSubmit = (studentData) => {
+    // Handle the form data, e.g., save to state, send to API, etc.
+    console.log('Form data submitted:', studentData);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Student Application 1</h1>
+      <StudentForm onSubmit={handleStudentFormSubmit} />
     </div>
   );
-}
+};
 
 export default App;
